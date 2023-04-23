@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor Reservas javascript Vanilla</title>
+
+    <!-- external links ---------------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-screen bg-gradient-to-l from-cyan-800 to-violet-900">
+    <header
+      class="header h-auto bg-gradient-to-r from-cyan-800 to-violet-900 p-2 md:p-4 flex justify-center content-center"
+      id="header"
+    >
+      <h1 class="text-white font-bold text-2xl md:text-4xl">
+        Reserva tu Cena con Nosotros
+      </h1>
+    </header>
+    <main
+      class="main pb-10 h-auto md:h-4/5 flex justify-center bg-[url('./images/back.jpg')] bg-cover bg-center"
+      id="main"
+    >
+      <section
+        id="contenido"
+        class="w10/12 md:w-4/6 flex items-center justify-around flex-col md:flex-row gap-4 text-white p-3"
+      >
+        <form
+          id="nueva-cita"
+          class="h-auto p-3 text-center bg-gradient-to-r from-blue-900 rounded-md"
+        >
+          <legend class="mb-1 font-bold text-xl bg-gray-800 p-3 rounded-md">
+            Estamos atentos a tu solicitud
+          </legend>
+          <div class="divFormElement">
+            <label class=" ">Nombre :</label>
+            <div class="">
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="w-full text-black p-1 rounded my-1"
+                placeholder="Nombre"
+              />
+            </div>
+          </div>
+
+          <div class="divFormElement">
+            <label class="">Teléfono:</label>
+            <div class="">
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                class="w-full text-black p-1 rounded my-1"
+                placeholder="Número de Teléfono"
+              />
+            </div>
+          </div>
+          <div class="divFormElement">
+            <label class="">Fecha:</label>
+            <div class="">
+              <input
+                type="date"
+                id="fecha"
+                name="fecha"
+                class="w-full text-black p-1 rounded my-1"
+              />
+            </div>
+          </div>
+
+          <div class="divFormElement">
+            <label class="">Hora:</label>
+            <div class="">
+              <input
+                type="time"
+                id="hora"
+                name="hora"
+                class="w-full text-black p-1 rounded my-1"
+              />
+            </div>
+          </div>
+
+          <div class="divFormElement">
+            <label class="">Cantidad de Personas:</label>
+            <div class="">
+              <input
+                type="number"
+                id="cantidad"
+                name="cantidad"
+                class="w-full text-black p-1 rounded my-1"
+              />
+            </div>
+          </div>
+          <div class="divFormElement">
+            <button
+              type="submit"
+              class="p-2 bg-lime-600 hover:bg-lime-300 text-white hover:text-black rounded-md m-3 text-xl"
+            >
+              Crear Reserva
+            </button>
+          </div>
+        </form>
+
+        <div
+          id="reservasContainer"
+          class="h-auto md:h-full border-4 border-gray-400 w-full md:w-3/6 text-center rounded-md overflow-auto"
+        >
+          <h2 class="text-center my-3 font-bold text-xl bg-gray-600 py-3">
+            Tus Reservas
+          </h2>
+
+          <ul id="reservasActualesContainer" class="border-2"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      id="footer"
+      class="fixed bottom-0 w-full h-20 bg-gray-800 text-center flex justify-center items-center text-white"
+    >
+      <p>Chat with Us</p>
+      <svg
+        class="w-7 m-5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+        ></path>
+      </svg>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./js/reservas.js"></script>
+  </body>
+</html>
